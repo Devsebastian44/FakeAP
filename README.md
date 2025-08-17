@@ -33,4 +33,3 @@ sudo python3 fakeAP.py
 ```
 
 <br>
-
