@@ -34,6 +34,3 @@ sudo python3 fakeAP.py
 
 <br>
 
-<p align="center">
-<img src="./Img/captura.png">
-</p>
