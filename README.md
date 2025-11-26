@@ -4,8 +4,7 @@
   <img src="./Img/Logo.png" height="300px" width="350px">
 </p>
 
-**FakeAP** es una herramienta de código abierto diseñada para crear puntos de acceso Wi-Fi falsos (AP falsos).  
-Simula redes legítimas para fines **educativos y de investigación en ciberseguridad**, permitiendo evaluar la seguridad de redes inalámbricas.
+**FakeAP** es una herramienta de código abierto diseñada para crear puntos de acceso Wi-Fi falsos (AP falsos). Simula redes legítimas para fines **educativos y de investigación en ciberseguridad**, permitiendo evaluar la seguridad de redes inalámbricas.
 
 ---
 
@@ -62,6 +61,4 @@ FakeAP/
 
 ## ⚠️ Aviso legal
 
-Este script ha sido desarrollado únicamente con fines **educativos y de investigación en ciberseguridad**.  
-El uso indebido de este material puede ser **ilegal**.  
-No me responsabilizo del mal uso ni de los daños que puedan ocasionarse por su ejecución.
+Este script ha sido desarrollado únicamente con fines **educativos y de investigación en ciberseguridad**. El uso indebido de este material puede ser **ilegal**. No me responsabilizo del mal uso ni de los daños que puedan ocasionarse por su ejecución.
