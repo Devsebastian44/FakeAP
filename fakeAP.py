@@ -83,8 +83,8 @@ while True:
         print("\033[1m\n[+] Requisistos instalados\n \033[0m")
     elif opcion == "2":
         os.system(f"airmon-ng start {primer_adaptador_nombre}")
-        os.system(f"ifconfig {primer_adaptador_nombre} up 192.168.1.1 netmask 255.255.255.0")
-        os.system("route add -net 192.168.1.0 netmask 255.255.255.0 gw 192.168.1.1")
+        os.system(f"ifconfig {primer_adaptador_nombre} up 192.168.3.1 netmask 255.255.255.0")
+        os.system("route add -net 192.168.3.0 netmask 255.255.255.0 gw 192.168.3.1")
         os.system(f"iptables --table nat --append POSTROUTING --out-interface {adaptador} -j MASQUERADE")
         os.system(f"iptables --append FORWARD --in-interface {primer_adaptador_nombre} -j ACCEPT")
         os.system("echo 1 > /proc/sys/net/ipv4/ip_forward\n")
