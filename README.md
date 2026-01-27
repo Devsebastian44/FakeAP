@@ -33,15 +33,32 @@ sudo apt install python3-pip python3-dev
 
 # Instala las librerías Python
 sudo pip install -r requirements.txt --break-system-packages
+
+# Instala las herramientas adicionales necesarias
+sudo apt install hostapd dnsmasq aircrack-ng tcpdump tshark xterm wpasupplicant
 ```
 
-3. Clona el repositorio y ejecuta el script:
+3. Inicia wpa_supplicant y ejecuta el script:
 
 ```bash
+# Inicia el servicio wpa_supplicant
+sudo systemctl start wpa_supplicant
+
+# Clona el repositorio y ejecuta el script
 git clone https://github.com/bl4ck44/FakeAP.git
 cd FakeAP
 sudo chmod +x fakeAP.py
 sudo python3 fakeAP.py
+```
+
+### Si el error persiste:
+
+```bash
+# Crea el directorio manualmente
+sudo mkdir -p /var/run/wpa_supplicant
+
+# Inicia wpa_supplicant manualmente
+sudo wpa_supplicant -B -i wlan0 -C /var/run/wpa_supplicant
 ```
 
 ---
