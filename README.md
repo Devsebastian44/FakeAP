@@ -11,7 +11,7 @@
 ## ⚙️ Requisitos
 
 - Kali Linux o Parrot OS
-- Adaptador Wireless compatible con modo monitor
+- Adaptador Wireless compatible con modo monitor y modo AP
 - Python 3.8 o superior
 
 ---
@@ -24,10 +24,15 @@
 iwconfig
 ```
 
-2. Instala la librería necesaria:
+2. Instala las librerías necesarias:
 
 ```bash
-sudo pip install pywifi --break-system-packages
+# Instala dependencias del sistema
+sudo apt update
+sudo apt install python3-pip python3-dev
+
+# Instala las librerías Python
+sudo pip install -r requirements.txt --break-system-packages
 ```
 
 3. Clona el repositorio y ejecuta el script:
@@ -37,6 +42,34 @@ git clone https://github.com/bl4ck44/FakeAP.git
 cd FakeAP
 sudo chmod +x fakeAP.py
 sudo python3 fakeAP.py
+```
+
+---
+
+## 📡 Compatibilidad de Adaptadores Wireless
+
+### Adaptadores Recomendados
+- **TP-Link TL-WN722N v1/v2** (Chipset Atheros AR9271) ✅
+- **Alfa AWUS036H** (Chipset Ralink RT3070) ✅
+- **Panda PAU09** (Chipset Ralink RT5572) ✅
+
+### Adaptadores NO Compatibles
+- **TP-Link TL-WN722N v3.x** (Chipset RTL8812AU/RTL8821AU) ❌
+
+### Si tienes TL-WN722N v3.x
+Puedes intentar instalar drivers específicos:
+
+```bash
+# Instala drivers para RTL8812AU
+git clone https://github.com/aircrack-ng/rtl8812au.git
+cd rtl8812au
+sudo make install
+sudo modprobe rtl8812au
+```
+
+Para verificar tu versión:
+```bash
+lsusb | grep TP-Link
 ```
 
 ---

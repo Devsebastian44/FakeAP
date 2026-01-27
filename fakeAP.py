@@ -20,7 +20,7 @@ if os.geteuid() == 0:
     pass
 else:
     print("[+] Ejecute este script como root (usando sudo).\n")
-    os.system("exit")
+    exit(1)
 
 
 
